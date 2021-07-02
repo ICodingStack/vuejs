@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+   
+    <div class="container mt-2" id="app">
+    	<div class="row">
+    	<h1>V-if && v-show</h1>
+    		<div class="col-md-12">
+				<div v-if="showAlert1" class="alert alert-primary" role="alert">
+				Show or hide v-if
+				</div>
+  		     <div v-show="showAlert2" class="alert alert-warning" role="alert">
+				Show or hide v-show
+				</div>
+   		     <button v-on:click="showAlert1 = !showAlert1" type="button" class="btn btn-primary">
+   		     Hide message v-if </button>
+   		     <button v-on:click="showAlert2 = !showAlert2" type="button" class="btn btn-primary">
+   		     Hide message v-show </button>
+
+    		</div>
+    	</div>
+    </div>
+	
+	<script src="js/vue.js"></script>
+	<script>
+	new Vue({
+		el:'#app',
+		data: {
+			showAlert1: true,
+			showAlert2: true,
+			
+		}
+	})
+	</script>
+</body>
+</html>
